@@ -11,9 +11,10 @@
       sizes="96x96"
       href="./images/netflixFavicon.ico/favicon-96x96.png"
     />
-    <link rel="stylesheet" href="./css/fixedHeader.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/fixedHeader.css" />
+    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/map.css" />
     <link rel="stylesheet" href="./css/trailer.css" />
     <link rel="stylesheet" href="./css/premiere.css" />
@@ -21,13 +22,41 @@
     <link rel="stylesheet" href="./css/toNetflix.css" />
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
-  <body onload="show19Alert()">
-    <!-- 💥 영상등급제한 최종은 위에있음 -->
-    <!-- <body> -->
+  <!-- <body onload="show19Alert()"> -->
+  <!-- 💥 영상등급제한 최종은 위에있음 -->
+  <body>
     <div class="container">
       <div class="wrap">
-        <div class="fixed-header">fixed-header</div>
-        <div class="header">header</div>
+        <div class="fixed-header">
+          <!-- flex -->
+          <div class="inner">
+            <div class="innerLeft">
+              <h1 class="logo">
+                <a href="#!">
+                  <span>KINGDOM 3</span>
+                </a>
+              </h1>
+            </div>
+            <div class="innerRight">
+              <div class="reservation">
+                <button class="reservation-btn">시사회 예약하기</button>
+              </div>
+              <div class="share">
+                <a href="#">
+                  <img
+                    style="width: 30px"
+                    class="share-icon"
+                    src="./images/share-icon.png"
+                    alt="share icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header">
+          <!--  -->
+        </div>
         <div class="key-visual">key-visual</div>
         <!-- <div class="trailer">
           <iframe
@@ -156,6 +185,7 @@
     </script> -->
     <!-- <script src="./js/map.js"></script> -->
     <script src="./js/main.js"></script>
+    <script src="./js/fixedHeader.js"></script>
     <script src="./js/premiere.js"></script>
     <script src="./js/select1pic.js"></script>
     <!-- 서버 : fetch json 연결하기 -->

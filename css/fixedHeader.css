@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+}
+.container .wrap .fixed-header {
+  position: fixed;
+  /* fixed는 zindex값을 주지 않아도 플롯되는건가???? */
+  z-index: 10;
+  width: 100vw;
+  height: 64px;
+  /* background: #efefef; */
+  display: flex;
+  justify-content: center;
+  /* 💥 ----------------------지울것 -------------------------- */
+  /* display: none; */
+  /*  */
+}
+/* .fixed-header .inner .logo{}
+.fixed-header .inner .reservation{}
+.fixed-header .inner .share{} */
+
+.fixed-header .inner {
+  width: 80%;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+.fixed-header .inner .innerLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fixed-header .inner .innerLeft .logo a span {
+  font-size: 1.8rem;
+}
+.fixed-header .inner .innerRight {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+/* .fixed-header .inner .innerRight .reservation {} */
+.fixed-header .inner .innerRight .reservation .reservation-btn {
+  font-size: 1rem;
+  padding: 6px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1.2px solid black;
+  background: none;
+}
+.fixed-header .inner .innerRight .share {
+}
+/* .fixed-header .inner .innerRight .share a {} */
+.fixed-header .inner .innerRight .share a img {
+  margin-left: 16px;
+}
