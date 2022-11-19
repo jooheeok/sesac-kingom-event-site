@@ -1,0 +1,142 @@
+.premiere {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.premiere .premiere-ad {
+  margin: 40px 0;
+}
+.premiere .premiere-ad p {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+.premiere .premiere-ad .premiere-event .premiere-ad-title {
+  padding: 20px 0;
+  font-size: 1.4rem;
+}
+
+.premiere .premiere-ad .premiere-event p:last-child {
+  padding-top: 6px;
+  font-weight: 600;
+}
+/* ----------- 시사회 이벤트 정보------------------------ */
+.premiere .premiere-ad .premiere-event-info {
+  margin: 30px 0;
+}
+.premiere .premiere-ad .premiere-event-info .premiere-event-info-title {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.premiere .premiere-ad .premiere-event-info .premiere-event-info-contents + p {
+  margin-top: 40px;
+  font-weight: 600;
+}
+/*  ----------- 사전 시사회 신청 폼 ------------------------- */
+
+/* .premiere .premiere-ad .premiere-event-comment .premiere-event-hidden-area {
+} */
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form {
+  color: white;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form
+  input {
+  margin-bottom: 10px;
+}
+.premiere .premiere-ad .premiere-event-comment .premiere-event-hidden-area {
+  display: flex;
+  justify-content: center;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form {
+  min-width: 280px;
+  /* max-width: 500px;
+  width: 40%; */
+  border: 1px solid green;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form
+  label {
+  text-align: left;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form
+  input[type="submit"] {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 34px;
+  background: white;
+  color: var(--main-ci-color);
+  margin-top: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form
+  input[type="submit"]:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.premiere
+  .premiere-ad
+  .premiere-event-comment
+  .premiere-event-hidden-area
+  form
+  input[type="text"],
+input[type="email"] {
+  border: none;
+}
+
+/* 토글 이벤트가 form의 css보다 아래 있어야 동작이 잘 됨 */
+/*  ----------- 사전 시사회 신청 토글 이벤트 버튼------------------------- */
+.premiere .premiere-ad .premiere-event-comment .applicationBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 34px;
+  background: var(--main-ci-color);
+  color: white;
+  margin-bottom: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.premiere .premiere-ad .premiere-event-comment .applicationBtn:hover {
+  /* background: var(--main-dark-color); */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/*  ----------- 사전 시사회 신청 토글 이벤트 ------------------------- */
+.premiere .premiere-ad .premiere-event-comment .premiere-event-hidden-area {
+  padding: 40px 0;
+  background: var(--main-dark-color);
+  display: none;
+}
+.premiere .premiere-ad .premiere-event-comment .toggle {
+  display: block;
+}
+
+/*  ----------- form inner CSS -------------------------  */

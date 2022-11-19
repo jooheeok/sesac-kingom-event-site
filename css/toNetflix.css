@@ -1,0 +1,22 @@
+.toNetflix {
+  background-image: url("../images/netflixFooter.jpeg");
+  width: 100vw;
+  height: 260px;
+}
+/* 어둡게 설정해줌 */
+.toNetflix .toNetflixWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)),
+    url(../images/sunset_on_ibiza.jpg);
+}
+.toNetflix .toNetflixWrap a {
+  /* border: 1px solid yellow; */
+  display: inline-block;
+}
+.toNetflix .toNetflixWrap a svg {
+  transform: translate(102px, 66px);
+}

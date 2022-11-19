@@ -1,0 +1,52 @@
+/* + added reset style */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  /* color: black; */
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  /* text-decoration: underline; */
+  font-weight: 1.5rem;
+}
+/* default css */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* variables */
+:root {
+  --main-ci-color: #e50914;
+  --main-dark-color: #b8060e;
+}
+body {
+  width: 100vw;
+  height: auto;
+  font-size: 1rem;
+}
+.container {
+  /* margin: 0 100px; */
+}
+
+.value-prop-logo {
+  /*  */
+}
+/*  ---------------------------*/
+.wrap {
+  border: 1px solid red;
+}
+.header {
+  background: pink;
+}
+.key-visual {
+  background: gray;
+}
+.trailer {
+  background: red;
+}
+.cast-introduction {
+  background: green;
+}
