@@ -31,6 +31,8 @@
 }
 .fixed-header .inner .innerLeft .logo a span {
   font-size: 1.8rem;
+  font-weight: 600;
+  color: black;
 }
 .fixed-header .inner .innerRight {
   display: flex;
@@ -43,12 +45,24 @@
   padding: 6px 8px;
   border-radius: 20px;
   cursor: pointer;
-  border: 1.2px solid black;
+  border: 1.5px solid black;
   background: none;
+  color: black;
 }
-.fixed-header .inner .innerRight .share {
-}
+/* .fixed-header .inner .innerRight .share {} */
 /* .fixed-header .inner .innerRight .share a {} */
 .fixed-header .inner .innerRight .share a img {
   margin-left: 16px;
+  color: black;
 }
+
+/* fixed header -> 스크롤 영역에 따라 컬러 변경 */
+/* default - black */
+/* 
+shareBtnBlack
+https://thenounproject.com/api/private/icons/4218559/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23000000&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjeXvJSGPkzszr7X0f9-behya0CDsu2qHRdj6hkqTMfr4Vw1One0YMfXP9lffHUb1QzfAOgqBtjLiVPCZyCpB7ikdAwg%3D%3D
+
+
+shareBtnWhite
+https://thenounproject.com/api/private/icons/4218559/edit/?backgroundShape=SQUARE&backgroundShapeColor=%23000000&backgroundShapeOpacity=0&exportSize=752&flipX=false&flipY=false&foregroundColor=%23FFFFFF&foregroundOpacity=1&imageFormat=png&rotation=0&token=gAAAAABjeXvJSGPkzszr7X0f9-behya0CDsu2qHRdj6hkqTMfr4Vw1One0YMfXP9lffHUb1QzfAOgqBtjLiVPCZyCpB7ikdAwg%3D%3D
+*/
