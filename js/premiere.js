@@ -6,6 +6,7 @@ const premiereEventHiddenArea = document.querySelector(
 
 applicationBtn.addEventListener("click", () => {
   premiereEventHiddenArea.classList.toggle("toggle");
+  window.scrollTo({ left: 0, top: 3000, behavior: "smooth" });
 });
 
 // enter키를 누를 경우 충돌이 생길까?

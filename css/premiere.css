@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  background: url("../images/backgroundClear.png") no-repeat;
+  background-size: cover;
+  /* object-fit: cover; */
 }
 
 .premiere .premiere-ad {
-  margin: 50px 0;
+  color: white;
+  width: 80%;
+  margin: 50px auto;
 }
 .premiere .premiere-ad p {
   font-size: 1.2rem;
@@ -35,8 +40,11 @@
 }
 /*  ----------- 사전 시사회 신청 폼 ------------------------- */
 
-/* .premiere .premiere-ad .premiere-event-comment .premiere-event-hidden-area {
-} */
+.premiere .premiere-ad .premiere-event-comment .premiere-event-hidden-area {
+  margin: 0 auto;
+  width: 80%;
+  opacity: 0.9;
+}
 .premiere
   .premiere-ad
   .premiere-event-comment

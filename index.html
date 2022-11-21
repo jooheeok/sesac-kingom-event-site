@@ -13,10 +13,10 @@
     />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/map.css" />
     <link rel="stylesheet" href="./css/fixedHeader.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/castIntroduction.css" />
-    <link rel="stylesheet" href="./css/map.css" />
     <link rel="stylesheet" href="./css/trailer.css" />
     <link rel="stylesheet" href="./css/premiere.css" />
     <link rel="stylesheet" href="./css/select1pic.css" />
@@ -41,7 +41,7 @@
           <div class="inner">
             <div class="innerLeft">
               <h1 class="logo">
-                <a href="#!">
+                <a href="#top">
                   <span>KINGDOM 3</span>
                 </a>
               </h1>
@@ -141,7 +141,10 @@
           </form>
         </div>
 
-        <!-- 여기에 들어갈 것이 chart JSON -->
+        <!-- 여기에 들어갈 것이 chart JSON ---------------->
+        <div class="favActorResultChat">
+          <canvas id="myChart"></canvas>
+        </div>
         <!----------------------- premiere ----------------------->
         <div class="premiere">
           <div class="premiere-ad">
@@ -235,7 +238,10 @@
         <!-- <div class="footer"></div> -->
       </div>
     </div>
+
     <!-- ✨ scripts ------------------------------------->
+    <!-- chart api  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- ✅ kakao maps all -->
     <!-- <script
       type="text/javascript"
@@ -255,7 +261,31 @@
     <script src="./js/main.js"></script>
     <!-- <script src="./js/fixedHeader.js"></script> -->
     <script src="./js/premiere.js"></script>
-    <!-- 원픽 -->
     <script src="./js/castIntroduction.js"></script>
+
+    <!-- <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "Point Styling",
+        data: {
+          labels: ["박병은", "류승룡", "배두나", "허준호", "주지훈"],
+          datasets: [
+            {
+              label: "# 가장 훌륭한 배우",
+              data: [12, 19, 3, 5, 2, 3], //cast.value, 이 데이터의 값을 변경하면 될 것 같음
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script> -->
   </body>
 </html>
