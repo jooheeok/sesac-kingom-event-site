@@ -21,8 +21,7 @@
     <link rel="stylesheet" href="./css/premiere.css" />
     <link rel="stylesheet" href="./css/select1pic.css" />
     <link rel="stylesheet" href="./css/toNetflix.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./js/fetchCastIntro.js" />
+    <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
     <style>
       .header-img {
         width: 100vw;
@@ -71,24 +70,7 @@
           />
         </div>
         <!-- <div class="key-visual">key-visual</div> -->
-        <!-- <div class="trailer">
-          <iframe
-            id="iframe"
-            src="https://www.youtube.com/embed/vSDQQUT2zm4"
-            title="kingdom2-trailer"
-            width="100%"
-            frameborder="0"
-            scrolling="no"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="
-              overflow-x: hidden;
-              overflow: auto;
-              width: 100%;
-              min-height: 700px;
-            "
-          ></iframe>
-        </div> -->
+
         <div class="cast-introduction">
           <div>
             <p>
@@ -218,6 +200,33 @@
             </p>
           </div>
         </div>
+        <!-- 영상 -->
+        <div class="trailer" onscroll="trailerAutoPlay()">
+          <div>
+            <h2>킹덤 3 예고편</h2>
+            <p>
+              죽은 자들이 살아나 생지옥이 된 위기의 조선,<br />
+              왕권을 탐하는 조씨 일가의 탐욕과 누구도 믿을 수 없게 되어버린
+              왕세자 창의 <br />
+              피의 사투를 그린 미스터리 스릴러
+            </p>
+          </div>
+          <iframe
+            id="iframe"
+            src="https://www.youtube.com/embed/vSDQQUT2zm4"
+            title="kingdom2-trailer"
+            frameborder="0"
+            scrolling="no"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              overflow-x: hidden;
+              overflow: auto;
+              width: 70%;
+              min-height: 640px;
+            "
+          ></iframe>
+        </div>
         <!--------------------- toNetflix --------------------->
         <div class="toNetflix">
           <div class="toNetflixWrap">
@@ -259,7 +268,7 @@
     </script> -->
     <!-- <script src="./js/map.js"></script> -->
     <script src="./js/main.js"></script>
-    <!-- <script src="./js/fixedHeader.js"></script> -->
+    <script src="./js/fixedHeader.js"></script>
     <script src="./js/premiere.js"></script>
     <script src="./js/castIntroduction.js"></script>
 

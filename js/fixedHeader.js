@@ -11,6 +11,7 @@ function showAlertPrepare() {
 // export { showAlertPrepare };
 
 // 스크롤 이벤트 - fixed header 컬러 변경
+/*
 let observer = new IntersectionObserver((e) => {
   console.log(e);
   const fixedHeaderLogo = document.querySelector(
@@ -40,3 +41,4 @@ observer.observe(header);
 // e[1].target.style.boder = "1.5 solid white";
 // e[1].target.style.color = "white";
 // e[2].target.style.color = "white";
+*/

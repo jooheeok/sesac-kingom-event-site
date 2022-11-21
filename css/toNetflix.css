@@ -1,7 +1,7 @@
 .toNetflix {
   background-image: url("../images/netflixFooter.jpeg");
   width: 100vw;
-  height: 260px;
+  height: 400px;
 }
 /* 어둡게 설정해줌 */
 .toNetflix .toNetflixWrap {

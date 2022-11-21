@@ -52,12 +52,7 @@ body {
 /* .container {} */
 /* .value-prop-logo {} */
 /*  ---------------------------*/
-.wrap {
-  border: 1px solid red;
-}
+/* .wrap { border: 1px solid red; } */
 .key-visual {
   background: gray;
-}
-.trailer {
-  background: red;
 }
