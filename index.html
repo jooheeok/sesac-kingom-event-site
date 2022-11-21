@@ -15,12 +15,14 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/fixedHeader.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/castIntroduction.css" />
     <link rel="stylesheet" href="./css/map.css" />
     <link rel="stylesheet" href="./css/trailer.css" />
     <link rel="stylesheet" href="./css/premiere.css" />
     <link rel="stylesheet" href="./css/select1pic.css" />
     <link rel="stylesheet" href="./css/toNetflix.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./js/fetchCastIntro.js" />
     <style>
       .header-img {
         width: 100vw;
@@ -68,7 +70,7 @@
             alt="삭제할 배경 사진"
           />
         </div>
-        <div class="key-visual">key-visual</div>
+        <!-- <div class="key-visual">key-visual</div> -->
         <!-- <div class="trailer">
           <iframe
             id="iframe"
@@ -83,11 +85,63 @@
               overflow-x: hidden;
               overflow: auto;
               width: 100%;
-              min-height: 300px;
+              min-height: 700px;
             "
           ></iframe>
         </div> -->
-        <div class="cast-introduction">cast-introduction</div>
+        <div class="cast-introduction">
+          <div>
+            <p>
+              <span>킹덤 시즌 2</span>를 캐리한 <span>배우</span>는 누구라고
+              생각하시나요?<br />
+              <span>당신의 원픽</span>을 골라주세요!
+            </p>
+          </div>
+          <form>
+            <div class="selectFavActor">
+              <div>
+                <h3>박병은</h3>
+                <img src="./images/Artboard 1.png" alt="#" style="width: 90%" />
+                <span>"저하를 따르겠습니다."</span>
+                <input type="radio" name="onepick" value="park" />
+              </div>
+              <div>
+                <h3>류승룡</h3>
+                <img src="./images/Artboard 2.png" alt="#" style="width: 90%" />
+                <span>"이 나라, 애초에 내 것이다."</span>
+
+                <input type="radio" name="onepick" value="ryu" />
+              </div>
+              <div>
+                <h3>배두나</h3>
+                <img src="./images/Artboard 3.png" alt="#" style="width: 90%" />
+                <span>"꼭 찾을 겁니다."</span>
+                <input type="radio" name="onepick" value="bae" />
+              </div>
+              <div>
+                <h3>허준호</h3>
+                <img src="./images/Artboard 4.png" alt="#" style="width: 90%" />
+                <span>"이 나라, 저하의 것입니다."</span>
+                <input type="radio" name="onepick" value="huh" />
+              </div>
+              <div>
+                <h3>주지훈</h3>
+                <img src="./images/Artboard 5.png" alt="#" style="width: 90%" />
+                <span>"막아야 한다."</span>
+                <input type="radio" name="onepick" value="ju" />
+              </div>
+            </div>
+            <div class="submitBtnWrap">
+              <input
+                class="submitBtn"
+                type="button"
+                value="당신이 생각하는 최고의 배우를 뽑아주세요!"
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- 여기에 들어갈 것이 chart JSON -->
         <!----------------------- premiere ----------------------->
         <div class="premiere">
           <div class="premiere-ad">
@@ -126,6 +180,11 @@
               </button>
               <!-- name에 넣어줄 것 = json에 연결되는 것들 -->
               <div class="premiere-event-hidden-area">
+                <h2>
+                  이름과 번호 이메일을 기입한 후 <br />
+                  신청 버튼을 누르시면 자동 신청됩니다.
+                </h2>
+                <!-- <form action="post"> -->
                 <form>
                   <label for="name">이름 :</label>
                   <input name="" id="name" type="text" required /> <br />
@@ -133,31 +192,29 @@
                   <input name="" id="number" type="text" required /><br />
                   <label for="email">이메일 :</label>
                   <input name="" id="email" type="email" required /><br />
-                  <input type="submit" value="킹덤3, 사전 시사회 신청" />
+                  <!-- <input
+                    class="submit-btn"
+                    type="submit"
+                    value="킹덤3, 사전 시사회 신청"
+                  /> -->
+                  <button class="submit-btn" type="submit">
+                    킹덤3, 사전 시사회 신청
+                  </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <!-- ----------------------------------------------- -->
-
         <!----------------------- map ----------------------->
         <div class="map">
           <div class="mapInner">
-            <div id="map" style="width: 100%; height: 250px"></div>
+            <div id="map"></div>
             <p>
-              <span> 킹덤3 시사회 장소</span> 압구정 CGV : 서울특별시 강남구
+              <span>킹덤3 시사회 장소</span> 압구정 CGV : 서울특별시 강남구
               압구정로30길 45, 14층 청담시네마홀
             </p>
           </div>
         </div>
-
-        <!-- <div class="select1pic">
-          <p>
-            킹덤 시즌 2를 캐리한 조연은 누구라고 생각하시나요?<br />
-            당신의 원픽을 골라주세요.
-          </p>
-        </div> -->
         <!--------------------- toNetflix --------------------->
         <div class="toNetflix">
           <div class="toNetflixWrap">
@@ -188,7 +245,7 @@
       var mapContainer = document.getElementById("map"), // 지도를 표시할 div
         mapOption = {
           center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-          level: 2, // 지도의 확대 레벨
+          level: 4, // 지도의 확대 레벨
         };
 
       // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
@@ -196,36 +253,9 @@
     </script> -->
     <!-- <script src="./js/map.js"></script> -->
     <script src="./js/main.js"></script>
-    <script src="./js/fixedHeader.js"></script>
+    <!-- <script src="./js/fixedHeader.js"></script> -->
     <script src="./js/premiere.js"></script>
-    <script src="./js/select1pic.js"></script>
-    <!-- 서버 : fetch json 연결하기 -->
-    <script src="./js/fetch.js"></script>
+    <!-- 원픽 -->
+    <script src="./js/castIntroduction.js"></script>
   </body>
 </html>
-
-<!-- 👇 logos -->
-<!--full name, netflix logo -->
-<!-- <svg class="svg-icon">
-      <g id="netflix-logo">
-        <path
-          d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
-          id="Fill-14"
-          fill=var(--main-ci-color)
-        ></path>
-      </g>
-    </svg> -->
-<!--simple ver, netflix logo -->
-<!-- <svg class="value-prop-logo" focusable="false" viewBox="225 0 552 1000" aria-hidden="true" data-uia="n-logo"><defs><radialGradient id="9df69f74-6264-4909-992e-84960a3b127b-a" r="75%" gradientTransform="matrix(.38 0 .5785 1 .02 0)"><stop offset="60%" stop-opacity=".3"></stop><stop offset="90%" stop-opacity=".05"></stop><stop offset="100%" stop-opacity="0"></stop></radialGradient></defs><path d="M225 0v1000c60-8 138-14 198-17V0H225" fill="#b1060e"></path><path d="M579 0v983c71 3 131 9 198 17V0H579" fill="#b1060e"></path><path d="M225 0v200l198 600V557l151 426c76 3 136 9 203 17V800L579 200v240L423 0H225" fill="url(#9df69f74-6264-4909-992e-84960a3b127b-a)"></path><path d="M225 0l349 983c76 3 136 9 203 17L423 0H225" fill="#e50914"></path></svg>
-    <path d="M225 0v200l198 600V557l151 426c76 3 136 9 203 17V800L579 200v240L423 0H225" fill="url(#9df69f74-6264-4909-992e-84960a3b127b-a)"></path>
-      <path d="M225 0v1000c60-8 138-14 198-17V0H225" fill="#b1060e"></path>
-      <path d="M579 0v983c71 3 131 9 198 17V0H579" fill="#b1060e"></path>
-      <path
-        d="M225 0v200l198 600V557l151 426c76 3 136 9 203 17V800L579 200v240L423 0H225"
-        fill="url(#9df69f74-6264-4909-992e-84960a3b127b-a)"
-      ></path>
-      <path
-        d="M225 0l349 983c76 3 136 9 203 17L423 0H225"
-        fill=varl(--main-ci-color)
-      ></path>
-    </svg> -->

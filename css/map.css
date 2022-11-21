@@ -2,12 +2,19 @@
   display: flex;
   justify-content: center;
 }
-.mapInner {
-  border: 1px solid green;
-  width: 60%;
+.map .mapInner {
+  margin: 30px 0;
+  border: 2px solid #cecece;
+  width: 40%;
 }
 
-.mapInner > p {
+.map .mapInner > p {
   text-align: center;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  margin: 1.4rem 0;
+  font-size: 1rem;
+}
+.map .mapInner > #map {
+  width: 100%;
+  height: 400px;
 }

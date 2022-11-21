@@ -1,0 +1,64 @@
+.container .cast-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+}
+
+.container .cast-introduction p {
+  padding: 200px 0 80px;
+  font-size: 2rem;
+  line-height: 5.6rem;
+  text-align: center;
+}
+.container .cast-introduction p span {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.container .cast-introduction p span:last-child {
+  font-size: 2.4rem;
+}
+.container .cast-introduction form {
+  /*  */
+}
+.container .cast-introduction form .selectFavActor {
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .cast-introduction form .selectFavActor div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.container .cast-introduction form .selectFavActor div h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.container .cast-introduction form .selectFavActor div img {
+  margin: 20px;
+  overflow: auto;
+}
+.container .cast-introduction form .selectFavActor div span {
+  font-size: 1.1rem;
+  margin: 4px 0 20px;
+}
+.container .cast-introduction form .selectFavActor div input[type="checkbox"] {
+  height: 32px;
+}
+.container .cast-introduction form .submitBtnWrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.container .cast-introduction form input[type="button"] {
+  margin: 50px 0 80px;
+  font-size: 1.3rem;
+  padding: 0.6rem 1rem;
+  background: transparent;
+  border: 0.15rem solid var(--main-ci-color);
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+}
