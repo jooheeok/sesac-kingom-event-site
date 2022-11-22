@@ -17,9 +17,9 @@ function show19Alert() {
 
 //스크롤에 좌표값 가져오기
 
-// window.addEventListener("scroll", (event) => {
-//   let scrollY = this.scrollY;
-//   let scrollX = this.scrollX;
-//   console.log(scrollY);
-//   console.log(scrollX);
-// });
+window.addEventListener("scroll", (event) => {
+  let scrollY = this.scrollY;
+  let scrollX = this.scrollX;
+  console.log(scrollY);
+  console.log(scrollX);
+});

@@ -54,7 +54,6 @@ function getData() {
     if (cast[i].actorName == actor.value) {
       let getCount = parseInt(localStorage.getItem(cast[i].actorName));
       getCount += 1;
-      //   aaa = cast[i].count;
       localStorage.setItem(cast[i].actorName, getCount);
     }
   }
