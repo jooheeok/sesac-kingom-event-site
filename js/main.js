@@ -16,16 +16,10 @@ function show19Alert() {
 }
 
 //스크롤에 좌표값 가져오기
-window.addEventListener("scroll", (event) => {
-  let scrollY = this.scrollY;
-  let scrollX = this.scrollX;
-  // console.log(scrollY);
-  // console.log(scrollX);
-});
 
-// 윈도우의 창이 특정 스크롤 위치로 가게 만듦
-const reservationBtn = document.querySelector(".reservation-btn");
-reservationBtn.addEventListener("click", () => {
-  console.log("click");
-  window.scrollTo({ left: 0, top: 2500, behavior: "smooth" });
-});
+// window.addEventListener("scroll", (event) => {
+//   let scrollY = this.scrollY;
+//   let scrollX = this.scrollX;
+//   console.log(scrollY);
+//   console.log(scrollX);
+// });

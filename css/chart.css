@@ -1,0 +1,13 @@
+/* toggle event를 준다면 이곳에 주면 됨 */
+
+.chartArea {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+.chartWarp {
+  width: 50vw;
+}
+#myChart {
+  margin: 40px 0 100px;
+}

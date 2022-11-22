@@ -1,32 +1,24 @@
+let actor = null;
+
 function findCast(event) {
-  // event.preventDefault();
-  let cast = null;
-  const onepick = document.getElementsByName("onepick"); // nodeList가져옴
+  // console.log(event);
+  const onepick = document.getElementsByName("onepick");
 
   for (var i = 0; i < onepick.length; i++) {
     if (onepick[i].checked == true) {
-      cast = onepick[i];
+      actor = onepick[i];
     }
   }
-  // cast가 비어있지 않다면, -> json에 파일을 넣어줘
-  if (cast != null) console.log(`${cast.value}`);
-  // 1. 현재 콘솔창에 찍히는 data를 json에 넣어줘야됨
-  else console.log(`선택 안됨`);
+  // console.log(actor);
+
+  // if (actor != null) console.log(`${actor.value}`);
+  // else console.log(`선택 안됨`);
+  getData();
 }
-
-// ✅ selectFavActorSubmitBtn  ->얘가 클릭되면 할일
-// create
-// 1 클릭된 데이터가 json으로 전달되서 json내에 count가 변경됨
-
-// reset
-// 2 또 동시에 json에서 클릭한
-// cast.value의 값이 json에 +count됨
-
-// print
-// 3. json에서 가져온 데이터를 갖고 char.api에서 print해주기
 
 const selectFavActorSubmitBtn = document.querySelector(".submitBtn");
 selectFavActorSubmitBtn.addEventListener("click", findCast);
+
 // addEventListener에 click은 되고 submit은 안되는 이유
 
 // fetch
@@ -53,3 +45,36 @@ selectFavActorSubmitBtn.addEventListener("click", findCast);
 // 각각의 카운트를 저장해둬야됨
 
 // ----------------------------------
+localStorage.setItem(cast[i].actorName, getCount);
+let aaa = 0;
+function getData() {
+  fetch("http://localhost:4000/cast")
+    .then((response) => response.json()) //.json뒤에 () 붙이는 것 주의할 것!
+    .then((data) => {
+      // console.log(data);
+      //   data.forEach((ele) => {
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].actorName == actor.value) {
+          console.log("1 : ", data[i].actorName);
+          data[i].count += 1;
+          console.log(data[i].count);
+          aaa = data[i].count;
+          console.log(data[i].count);
+        }
+      }
+      bbb = { id: 5, actorName: "ju", count: aaa };
+      postData(bbb);
+    });
+}
+
+function postData(data) {
+  // console.log(aaa);
+  fetch("http://localhost:4000/cast", {
+    method: "POST",
+    body: JSON.stringify({ id: 5, actorName: "ju", count: 0 }),
+    header: {
+      "content-type": "application/json; charset=UTF-8",
+    },
+  }).then((res) => console.log(res.status));
+  console.log(bbb);
+}
