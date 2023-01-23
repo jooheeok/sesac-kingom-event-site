@@ -1,6 +1,7 @@
 # ✨ 프로젝트 명 : 킹덤3 이벤트 페이지 
 
 <br>
+
 ## 👉 프로젝트 설명
 - SeSAC(청년취업사관학교)에서 진행 된 개인 프로젝트입니다. netflix의 인기 시리즈물인 kingdom3 개봉일 이전에 영화관 사전 시사회 이벤트 페이지를 만들어보고자 프로젝트를 진행했습니다. 교육 중 학습한 html, css, javascript를 사용하여 구현하고싶어 mui와 부트스트랩은 사용하지 않고 제작했습니다. 
 
@@ -31,13 +32,9 @@
 #### deploy : netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4af0edf6-f1e6-41d7-9334-b8d0985a357c/deploy-status)](https://app.netlify.com/sites/kingdom3-eventpage-byjoohee/deploys)
 
-<br>
-
 #### Design tools : Adobe Photoshop, Figma
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
-
-<br>
 
 #### cooperataion tools : github, npm
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
