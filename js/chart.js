@@ -1,3 +1,5 @@
+// import { getData } from "./newCastIntro";
+
 // 차트 생성
 // 차트에 내용 변경하기
 const ctx = document.getElementById("myChart").getContext("2d");

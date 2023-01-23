@@ -1,1 +1,0 @@
-# sesac-kingom-event-site

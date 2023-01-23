@@ -3,11 +3,10 @@
 .chartArea {
   display: flex;
   justify-content: center;
-  /* border: 2px solid red; */
 }
 .chartWarp {
   width: 50vw;
 }
 #myChart {
-  margin: 40px 0 100px;
+  margin: 40px 0 70px;
 }

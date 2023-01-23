@@ -128,6 +128,7 @@
         <div class="chartArea">
           <div class="chartWarp">
             <canvas id="myChart" width="80vw"></canvas>
+            <canvas id="updating-chart" width="80vw"></canvas>
           </div>
         </div>
         <!----------------------- premiere ----------------------->
@@ -252,11 +253,11 @@
     <!-- chart api  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- ✅ kakao maps all -->
-    <!-- <script
+    <script
       type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b0aa4672ef5ef883c202217470891f2"
-      ></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6211eb8725b04cd919493e9ff84a065f"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
       var mapContainer = document.getElementById("map"), // 지도를 표시할 div
         mapOption = {
@@ -266,16 +267,15 @@
 
       // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
       var map = new kakao.maps.Map(mapContainer, mapOption);
-    </script> -->
+    </script>
     <script src="./js/showAlert.js"></script>
     <script src="./js/fixedHeader.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/premiere.js"></script>
-    <!-- <script src="./js/castIntroduction.js"></script> -->
-    <script src="./js/new.js"></script>
+    <script src="./js/newCastIntro.js"></script>
     <!-- chart -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <script src="./js/chart.js"></script>
+    <!-- <script src="./js/chart.js"></script> -->
     <script src="./js/map.js"></script>
   </body>
 </html>

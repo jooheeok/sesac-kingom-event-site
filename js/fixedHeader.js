@@ -10,6 +10,6 @@ shareBtn.addEventListener("click", () => {
 // 윈도우의 창이 특정 스크롤 위치로 가게 만듦
 const reservationBtn = document.querySelector(".reservation-btn");
 reservationBtn.addEventListener("click", () => {
-  console.log("click");
-  window.scrollTo({ left: 0, top: 2300, behavior: "smooth" });
+  // console.log("click");
+  window.scrollTo({ left: 0, top: 2600, behavior: "smooth" });
 });
