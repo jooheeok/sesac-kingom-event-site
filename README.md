@@ -19,15 +19,13 @@
 
 <br>
 
-## 🛠 사용 기술 ⚙
+## ⚙ 사용 기술
 #### FE : HTML, CSS, Vanila JS, kakaoAPI, Chart.js, 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![KakaoTalk](https://img.shields.io/badge/kakaotalk-ffcd00.svg?style=for-the-badge&logo=kakaotalk&logoColor=000000)
 ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
-
-<br>
 
 #### deploy : netlify
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4af0edf6-f1e6-41d7-9334-b8d0985a357c/deploy-status)](https://app.netlify.com/sites/kingdom3-eventpage-byjoohee/deploys)
