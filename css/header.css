@@ -4,3 +4,10 @@
   background: pink;
 }
 /* .header{} */
+.header-img {
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url("../images/main.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+} */
